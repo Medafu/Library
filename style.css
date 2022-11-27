@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --header-color: #312e81;
+  --bg-color: #3730a3;
+  --text-color: rgb(255 255 255 / 0.9);
+  --red-color: rgb(239 68 68 / 0.8);
+  --red-hover: rgb(239 68 68 / 0.6);
+  --green-color: rgb(74 222 128 / 0.8);
+  --green-hover: rgb(74 222 128 / 0.6);
+  --checkbox-color: #3730a3;
+  --input-color: #4f46e5;
+  --btn: #4f46e5;
+  --btn-hover: rgb(79 70 229 / 0.6);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-direction: column;
+}
+
+form {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+#header {
+  display: flex;
+  background-color: var(--header-color);
+}
+
+#header div {
+  display: flex;
+  font-size: 1.2rem;
+  gap: 10px;
+  color: var(--text-color);
+}
+
+#radio-wrapper{
+  align-items: center;
+  gap: 10px !important;
+}
+
+#content {
+  background-color: var(--bg-color);
+  flex: 1;
+}
+
+input {
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: var(--input-color);
+  outline: none;
+  border: none;
+}
+
+input[type="number"] {
+  width: 70px;
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  outline: none;
+  position: relative;
+  padding: 15px 35px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: var(--red-color);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  border-radius: 20px;
+  left: 1px;
+  top: 1px;
+  width: 40%;
+  height: 92%;
+  background-color: var(--checkbox-color);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--green-color);
+}
+
+input[type="checkbox"]:checked::before {
+  left: 59%;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--btn);
+  color: white;
+}
+
+#btn_true {
+ background-color: var(--green-color);
+}
+
+#btn_true:hover {
+  background-color: var(--green-hover);
+}
+
+#btn_false {
+  background-color: var(--red-color);
+}
+
+#btn_false:hover {
+  background-color: var(--red-hover);
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, clamp(200px, 250px, 300px));
+  grid-template-rows: repeat(auto-fit, minmax(150px, 250px));
+  color: white;
+  gap: 15px;
+  margin: 20px 20px;
+}
+
+.card {
+  background-color: #312e81;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
