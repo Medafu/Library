@@ -91,6 +91,7 @@ input[type="checkbox"]::before {
   width: 40%;
   height: 92%;
   background-color: var(--checkbox-color);
+  transition: left 0.1s;
 }
 
 input[type="checkbox"]:checked {
